@@ -42,6 +42,8 @@ console.log(`   - ${esDuplicates} in the esMap`)
 
 //Let's now try without the Spanish map
 
+console.log("\nExcluding the Spanish map \n")
+
 enDuplicates = 0;
 itDuplicates = 0;
 esDuplicates = 0;
