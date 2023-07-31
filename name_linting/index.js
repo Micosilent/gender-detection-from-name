@@ -42,6 +42,8 @@ console.log(`   - ${esDuplicates} in the esMap`)
 
 //Let's now try without the Spanish map
 
+console.log("\nExcluding the Spanish map \n")
+
 enDuplicates = 0;
 itDuplicates = 0;
 esDuplicates = 0;
@@ -55,13 +57,7 @@ itMap.forEach((value, key) => consolidateNames(value, key, 'it', excludingSpanis
 excludingSpanishMap.forEach((value, _key) => {
     if (Object.keys(value).length > 1) {
         totalDuplicates += 1;
-        if (value["en"]) enDuplicates += 1;
-        if (value["it"]) itDuplicates += 1;
-        if (value["es"]) esDuplicates += 1;
     }
 })
 
 console.log(`There are ${totalDuplicates} duplicates`)
-console.log(`   - ${enDuplicates} in the enMap`)
-console.log(`   - ${itDuplicates} in the itMap`)
-console.log(`   - ${esDuplicates} in the esMap`)
