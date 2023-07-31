@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node index.js",
     "lint": "eslint ./",
+    "name_lint": "node ./name_linting/index.js",
     "test": "nyc mocha",
     "coverage": "nyc --reporter=lcov --reporter=text mocha"
   },
