@@ -48,6 +48,7 @@ enDuplicates = 0;
 itDuplicates = 0;
 esDuplicates = 0;
 totalDuplicates = 0;
+let differingGenders = 0
 
 const excludingSpanishMap = new Map()
 
@@ -57,7 +58,8 @@ itMap.forEach((value, key) => consolidateNames(value, key, 'it', excludingSpanis
 excludingSpanishMap.forEach((value, _key) => {
     if (Object.keys(value).length > 1) {
         totalDuplicates += 1;
+        if (value["en"] !== value["it"]) differingGenders += 1
     }
 })
 
-console.log(`There are ${totalDuplicates} duplicates`)
+console.log(`There are ${totalDuplicates} duplicates, of which ${differingGenders} have differing genders`)
